@@ -46,10 +46,11 @@ class Student
   end
   
   def self.new_from_db(row)
-    new_student = self.new
-    new_student.id = row[0]
-    new_student.name =  row[1]
-    new_student.grade = row[2]
+    
+    new_student_id = row[0]
+    new_student_name =  row[1]
+    new_student_grade = row[2]
+    new_student = self.new(new_student_id, new_student_name, new_student_grade)
     new_student  # return the newly created instance
   end
   
