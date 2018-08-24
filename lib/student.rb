@@ -53,7 +53,7 @@ class Student
     new_student  # return the newly created instance
   end
   
-   def self.create(name:, grade:)
+   def self.create(name, grade)
     student = Student.new(name, grade)
     student.save
     student
