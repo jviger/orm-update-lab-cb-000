@@ -52,5 +52,11 @@ class Student
     new_student.grade = row[2]
     new_student  # return the newly created instance
   end
+  
+   def self.create(name:, grade:)
+    student = Student.new(name, grade)
+    student.save
+    student
+  end
 
 end
